@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Breathing Programs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Breathing Programs</h1>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-tab="session">Session</button>
+  <button class="tab" data-tab="programs">Saved Programs</button>
+</nav>
+
+<main>
+
+  <!-- SESSION TAB -->
+  <section id="session" class="tab-content active">
+
+    <div id="noPrograms" class="card hidden">
+      No saved programs.  
+      Go to <b>Saved Programs</b> to create one.
+    </div>
+
+    <div id="sessionControls" class="card">
+      <label>Program</label>
+      <select id="programSelect"></select>
+
+      <label>Duration (minutes)</label>
+      <input type="number" id="duration" value="10" min="1"/>
+
+      <button id="startSession">Start</button>
+      <button id="stopSession">Stop</button>
+
+      <div id="countdown"></div>
+      <div id="phase"></div>
+      <div id="remaining"></div>
+    </div>
+
+    <div class="breathing-area">
+      <div id="circle"></div>
+    </div>
+
+  </section>
+
+  <!-- PROGRAMS TAB -->
+  <section id="programs" class="tab-content">
+
+    <div class="card">
+      <label>Saved Programs</label>
+      <select id="programList"></select>
+      <button id="deleteProgram">Delete</button>
+    </div>
+
+    <div class="card">
+      <h2>Add / Edit Program</h2>
+
+      <input id="programName" placeholder="Program name" />
+
+      <label>Inhale</label>
+      <input type="number" id="inhale" min="0" />
+
+      <label>Inhale Hold</label>
+      <input type="number" id="inhaleHold" min="0" />
+
+      <label>Exhale</label>
+      <input type="number" id="exhale" min="0" />
+
+      <label>Exhale Hold</label>
+      <input type="number" id="exhaleHold" min="0" />
+
+      <button id="saveProgram">Save Program</button>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

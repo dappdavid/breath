@@ -23,25 +23,31 @@
   <section id="session" class="tab-content active">
 
     <div id="noPrograms" class="card hidden">
-      No saved programs.  
+      No saved programs.<br />
       Go to <b>Saved Programs</b> to create one.
     </div>
 
-    <div id="sessionControls" class="card">
+    <div id="sessionControls" class="card hidden">
       <label>Program</label>
       <select id="programSelect"></select>
 
       <label>Duration (minutes)</label>
-      <input type="number" id="duration" value="10" min="1"/>
+      <input type="number" id="duration" value="10" min="1" />
 
-      <button id="startSession">Start</button>
-      <button id="stopSession">Stop</button>
-
-      <div id="countdown"></div>
-      <div id="phase"></div>
-      <div id="remaining"></div>
+      <div class="button-row">
+        <button id="startSession">Start</button>
+        <button id="pauseResume" class="pause">Pause</button>
+        <button id="stopSession">Stop</button>
+      </div>
     </div>
 
+    <!-- INFO AREA -->
+    <div class="session-info">
+      <div id="phaseLabel" class="phase-label"></div>
+      <div id="remaining" class="remaining-time"></div>
+    </div>
+
+    <!-- BREATHING VISUAL -->
     <div class="breathing-area">
       <div id="circle"></div>
     </div>

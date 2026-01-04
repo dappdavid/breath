@@ -54,7 +54,7 @@ main {
 input, select, button {
   width: 100%;
   margin-top: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.6rem;
   border-radius: 6px;
   border: none;
 }
@@ -77,6 +77,42 @@ button:hover {
   display: block;
 }
 
+/* SESSION CONTROLS */
+.button-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+button.pause {
+  background: #a855f7;
+}
+
+button.resume {
+  background: #22c55e;
+}
+
+/* INFO AREA */
+.session-info {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.phase-label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c4b5fd;
+}
+
+.remaining-time {
+  margin-top: 0.25rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
 /* BIG BREATHING AREA */
 .breathing-area {
   height: 50vh;
@@ -86,10 +122,10 @@ button:hover {
 }
 
 #circle {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background: radial-gradient(#8f6bff, #5b2be0);
-  border: 6px solid #bfa8ff;
+  border: 8px solid #d6c8ff;
   transition: transform linear;
 }
